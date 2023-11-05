@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SWEET HOME</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            padding: 0 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .animated-title {
+            font-size: 40px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .animated-title:hover {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="receta1.html">
+                <h1 class="animated-title">Sweet Home</h1>
+            </a>
+        </header>
+    </div>
+    <script>
+        $(document).ready(function () {
+            const title = $('.animated-title');
+    
+            title.mouseenter(function () {
+                title.animate({ color: "#ff69b4" }, 500);
+            });
+    
+            title.mouseleave(function () {
+                title.animate({ color: "#333" }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
